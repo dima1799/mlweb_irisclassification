@@ -11,11 +11,10 @@ def train_model():
     x = df.data
     y = df.target
 
-    xtrain,xtest,ytrain,ytest = train_test_split(x,y,test_size=0.25,random_state=42)
-    dt = DecisionTreeClassifier().fit(xtrain,ytrain)
+    xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.25, random_state=42)
+    dt = DecisionTreeClassifier().fit(xtrain, ytrain)
     prediction = dt.predict(xtest)
 
-    accuracy = accuracy_score(ytest,prediction)
-    joblib.dump(dt,'iris-model.model')
+    accuracy = accuracy_score(ytest, prediction)
+    joblib.dump(dt, 'iris-model.model')
     print('Model have accuracy: {}'.format(accuracy))
-    
