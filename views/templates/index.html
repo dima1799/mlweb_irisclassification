@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+    
+    <form action="" method="post">
+        <p>
+	    <label for="sepal_length">sepal_length</label>
+	    <input type="text" name="sepal_length">
+	</p>
+	<p>
+	    <label for="sepal_width">sepal_width</label>
+	    <input type="text" name="sepal_width">
+	</p>
+	<p>
+	    <label for="petal_length">petal_length</label>
+	    <input type="text" name="petal_length">
+	</p>
+	<p>
+	    <label for="petal_width">petal_width</label>
+	    <input type="text" name="petal_width">
+	</p>
+	<p>
+	    <input type="submit">
+	</p>
+    </form>
+    
+</body>
+</html>
